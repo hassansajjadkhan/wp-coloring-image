@@ -1,0 +1,19 @@
+{
+  "name": "wp-coloring-automation",
+  "version": "1.0.0",
+  "description": "AI Coloring Page Automation System for WordPress",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "build": "npm run build --workspace=server && npm run build --workspace=client",
+    "start": "npm start --workspace=server",
+    "setup": "npm install && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

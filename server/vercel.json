@@ -1,0 +1,18 @@
+{
+  "name": "coloring-automation-api",
+  "runtime": "nodejs18.x",
+  "functions": {
+    "src/index.ts": {
+      "handler": "src/index.ts",
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key",
+    "WORDPRESS_URL": "@wordpress_url",
+    "WORDPRESS_USERNAME": "@wordpress_username",
+    "WORDPRESS_PASSWORD": "@wordpress_password",
+    "NODE_ENV": "production",
+    "DB_PATH": "/tmp/coloring.db"
+  }
+}
