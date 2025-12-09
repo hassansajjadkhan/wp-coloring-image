@@ -119,7 +119,7 @@ router.get('/approved-pages', async (req, res) => {
 // Publish page to WordPress
 router.post('/publish-page', async (req, res) => {
   try {
-    const { approvedPageId } = req.body;
+    const { approvedPageId } = req.body as { approvedPageId: number };
 
     if (!approvedPageId) {
       return res.status(400).json({ error: 'Missing approvedPageId' });
@@ -133,7 +133,7 @@ router.post('/publish-page', async (req, res) => {
        FROM approved_pages ap
        JOIN generated_pages gp ON ap.page_id = gp.id
        WHERE ap.id = ?`
-    ).get(approvedPageId);
+    ).get(approvedPageId) as any;
 
     if (!approvedPage) {
       console.error('❌ Page not found:', approvedPageId);
