@@ -1,13 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite",
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key",
-    "WORDPRESS_URL": "@wordpress_url",
-    "WORDPRESS_USERNAME": "@wordpress_username",
-    "WORDPRESS_PASSWORD": "@wordpress_password",
-    "DAILY_LIMIT": "@daily_limit",
-    "DEFAULT_PUBLISH_HOUR": "@default_publish_hour"
-  }
+  "framework": "vite"
 }
