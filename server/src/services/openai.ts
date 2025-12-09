@@ -191,7 +191,7 @@ The design should be a single main illustration that fills most of the page.`;
       quality: 'hd',
     });
 
-    const imageUrl = response.data[0]?.url || '';
+    const imageUrl = response.data?.[0]?.url || '';
     console.log('✅ OpenAI returned URL:', imageUrl.substring(0, 50) + '...');
     
     if (!imageUrl) {

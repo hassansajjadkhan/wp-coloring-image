@@ -37,11 +37,11 @@ export async function generateColoringPagePdf(
       const maxWidth = 550;
       const maxHeight = 700;
 
-      doc.image(imageResponse.data, {
+      doc.image(imageResponse.data as any, {
         fit: [maxWidth, maxHeight],
         align: 'center',
         valign: 'top',
-      });
+      } as any);
 
       doc.moveDown();
 
@@ -89,11 +89,11 @@ export async function generateBatchPdf(
             timeout: 30000,
           });
 
-          doc.image(imageResponse.data, {
+          doc.image(imageResponse.data as any, {
             fit: [550, 600],
             align: 'center',
             valign: 'top',
-          });
+          } as any);
         } catch (error) {
           doc.text('Image loading failed', { align: 'center' });
         }
