@@ -5,8 +5,7 @@
       "src": "server/package.json",
       "use": "@vercel/node",
       "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "nodejs18.x"
+        "maxLambdaSize": "50mb"
       }
     },
     {
